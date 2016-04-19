@@ -9,10 +9,9 @@
   </head>  
   <body>
     
-    <h1 id = "title">What would you weigh on...</h1>
     
-    <div id="container">
-      
+    <div class="container">
+      <h1 id = "title">What would you weigh on...</h1>
       
       
      <form action="javascript:findWeight()">
@@ -24,11 +23,20 @@
     
     
     
-    <p id="output"></p>
+    <p id="output"> </p>
+    </div>
+    <div class="container" id="second">
+    <h1 id="secondTitle">Would you like to add a planet?</h1>
       
-      </div>
+     <form action="javascript:addPlanet()" id="planetForm">
+      What's the name of the planet? 
+      <input type="text" name="planetName"><br>
+      What's the Weight multiplier of the planet? 
+      <input type="text" name="weight">  
+      <input type="submit" value="Add">
+    </form>  
     
-    
+    </div>
     
       <script src="/js/main.js"></script>
   </body>

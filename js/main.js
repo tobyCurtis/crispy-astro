@@ -38,13 +38,23 @@ function findWeight()
   //output uses if statement because if the planet is sun, it sounds better adding The before it. could also just change array.
   if(planet != planets[0])
   {
-  outputElement.innerHTML = "You would weigh "+operation+" on "+planet;
+    outputElement.innerHTML = "You would weigh "+operation+"lbs on "+planet;
   }
   else 
   {
-    outputElement.innerHTML = "You would weigh "+operation+" on the "+planet;
+    outputElement.innerHTML = "You would weigh "+operation+"lbs on the "+planet;
   }
-    
-
 }
 
+
+//function to add a planet to the dropdown with information requested
+function addPlanet()
+{
+  var weight = document.getElementsByName("weight")[0].value;
+  var planetName = document.getElementsByName("planetName")[0].value;
+  var select = document.getElementById("dropdown");
+  var option = document.createElement("option");
+  option.text = planetName;
+  option.value = weight;
+  dropdown.appendChild(option);
+}
